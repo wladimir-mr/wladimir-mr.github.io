@@ -1,0 +1,87 @@
+.section-3d
+  position: absolute
+  width: 600px
+  height: 520px
+  left: 50%
+  z-index: 2
+  bottom: 25px
+  margin-right: 150px
+  overflow: hidden
+  background: none
+  transform: translateX(300px)
+  transition: all 500ms ease-in-out
+  opacity: 0
+  img
+    width: 900px
+  &.is-visible
+    transform: translateX(0px)
+    opacity: 1
+
+  .text-3d
+    width: 100%
+    height: 490px
+    position: absolute
+    z-index: 1
+    top: 0
+    opacity: 0
+    background: rgba(red, 0.6)
+    transition: all 300ms ease-in-out
+
+    h1
+      position: absolute
+      color: black
+      font-family: 'Dosis', sans-serif
+      font-weight: 400
+      opacity: 0
+      transform: translateY(50px)
+      transition: all 200ms ease-in-out
+      font-size: 80px
+      text-align: center
+      top: 80px
+      margin-left: 50px
+
+.section-3d:hover .text-3d
+  opacity: 1
+  box-shadow: 0 14px 14px -15px black
+
+  h1
+    opacity: 1
+    transform: translateY(0px)
+@media only screen and (min-device-width: 320px) and (orientation: portrait)
+  .section-3d
+    width: 370px
+    height: 195px
+    left: 0
+    top: 0
+    position: relative
+    opacity: 1
+    img
+      width: 360px
+
+    .text-3d
+      width: 360px
+      height: 195px
+      opacity: 1
+      h1
+        opacity: 1
+        font-size: 48px
+        top: 0
+
+@media only screen and (min-device-width: 600px) and (max-device-width: 1280px) and (orientation: landscape)
+  .section-3d
+    width: 600px
+    height: 320px
+    left: 0
+    top: 0
+    position: relative
+    opacity: 1
+    img
+      width: 600px
+    .text-3d
+      width: 600px
+      height: 330px
+      opacity: 1
+      h1
+        opacity: 1
+        font-size: 48px
+        top: 0

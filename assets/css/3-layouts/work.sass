@@ -1,0 +1,119 @@
+.section-work
+  position: relative
+  margin: auto
+  background: none
+  width: 800px
+
+  .work
+    h1
+      font-family: 'Old Standard TT', serif
+      font-weight: 400
+      font-size: 72px
+      text-align: center
+
+    .section-works
+      display: flex
+
+  .mograph
+    z-index: 2
+    position: relative
+  .web
+    position: relative
+    img
+      width: 800px
+  .ilust
+    position: relative
+    overflow: hidden
+    height: 340px
+    img
+      width: 800px
+  .editorial
+    position: relative
+    height: 350px
+    overflow: hidden
+    img
+      width: 800px
+  .flash
+    margin-top: 3px
+    position: relative
+    overflow: hidden
+    img
+      width: 800px
+  .maya
+    margin-top: 5px
+    position: relative
+    overflow: hidden
+    img
+      width: 800px
+
+  .section-title
+    width: 100%
+    height: 100%
+    position: absolute
+    z-index: 1
+    top: 0
+    bottom: 0
+    opacity: 1
+    background: rgba(white, 0.6)
+
+    h1
+      position: absolute
+      color: black
+      font-family: 'Dosis', sans-serif
+      font-weight: 400
+      transform: translateY(50px)
+      font-size: 80px
+      text-align: center
+      align-items: center
+      margin-left: 50px
+  .bg-rect
+    height: 800px
+    width: 700px
+    background: none
+    border: 3px solid orange
+    position: absolute
+    z-index: -1
+    top: -50px
+    left: -100px
+    animation: rectangle 2s
+    @keyframes rectangle
+      0%
+        height: 0px
+        width: 0px
+        transform: translateX(-300px)
+      100%
+        height: 800px
+        width: 700px
+        transform: translateX(0px)
+
+@media only screen and (min-device-width: 320px) and (orientation: portrait)
+  .section-work
+    width: 360px
+    .section-works
+      width: 360px
+      .section-title
+        width: 360px
+        h1
+          font-size: 54px
+@media only screen and (min-device-width: 600px) and (max-device-width: 1024px) and (orientation: portrait)
+  .section-work
+    width: 800px
+    position: relative
+    overflow: hidden
+    left: -150px
+    .section-works
+      width: 800px
+      overflow: hidden
+      .section-title
+        width: 800px
+        h1
+          font-size: 54px
+
+
+@media only screen and (min-device-width: 600px) and (max-device-width: 1280px) and (orientation: landscape)
+  .section-work
+    width: 800px
+    overflow: hidden
+    .section-works
+      width: 800px
+      overflow: hidden

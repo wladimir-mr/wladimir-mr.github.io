@@ -1,0 +1,91 @@
+.section-illustration
+  position: relative
+  width: 50%
+  left: 0
+  margin-left: -80px
+  margin-top: -50px
+  overflow: hidden
+  background: none
+  transform: translateX(-300px)
+  transition: all 500ms ease-in-out
+  opacity: 0
+  img
+    width: 650px
+  &.illustration-visible
+    transform: translateX(0px)
+    opacity: 1
+
+  .text-illustration
+    width: 100%
+    height: 1004px
+    position: absolute
+    z-index: 0
+    top: 0
+    opacity: 0
+    background: rgba(yellow, 0.6)
+    transition: all 300ms ease-in-out
+
+    h1
+      position: absolute
+      color: black
+      font-family: 'Dosis', sans-serif
+      font-weight: 400
+      opacity: 0
+      transform: translateY(50px)
+      transition: all 200ms ease-in-out
+      font-size: 100px
+      text-align: center
+      top: 300px
+      margin-left: 50px
+
+.section-illustration:hover .text-illustration
+  opacity: 1
+  box-shadow: 0 14px 14px -15px black
+  h1
+    opacity: 1
+    transform: translateY(0px)
+
+@media only screen and (min-device-width: 320px) and (orientation: portrait)
+
+  .section-illustration
+    width: 360px
+    height: 555px
+    transform: translateY(0)
+    left: 0
+    top: 0
+    position: relative
+    opacity: 1
+    margin-left: 0px
+    margin-top: 0px
+
+    img
+      width: 360px
+
+    .text-illustration
+      width: 360px
+      height: 555px
+      opacity: 1
+
+      h1
+        opacity: 1
+        font-size: 48px
+        left: -20px
+        top: 200px
+
+@media only screen and (min-device-width: 600px) and (max-device-width: 1280px) and (orientation: landscape)
+  .section-illustration
+    width: 600px
+    transform: translateY(0)
+    transform: rotate(0deg)
+    left: 0
+    top: 0
+    position: relative
+    .text-illustration
+      width: 600px
+      height: 1000px
+      opacity: 1
+      h1
+        opacity: 1
+        font-size: 72px
+        left: -20px
+        top: 200px

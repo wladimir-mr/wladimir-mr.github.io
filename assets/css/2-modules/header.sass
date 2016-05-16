@@ -1,0 +1,527 @@
+@-ms-viewport
+  width: device-width
+a, li, ul
+  list-style-type: none
+  text-decoration: none
+  color: white
+
+.home-wrap
+  overflow: hidden
+  z-index: 3
+
+  header
+    width: 100%
+    background: #2D2D2D
+    margin: auto
+    position: fixed
+    transition: height 0.3s
+    height: 550px
+
+    &.header-small
+      position: fixed
+      height: 80px
+      z-index: 3
+      transition: all 0.3s
+
+      .mobile-nav-toggle
+        display: none
+        width: 50px
+        height: 50px
+        position: relative
+        bottom: 100px
+        margin-left: 700px
+        background: none
+
+      #bodymovin
+        top: -30px
+        width: 250px
+        float: left
+        transition: all 0.3s
+      .site-nav
+        top: -15px
+
+  #bodymovin
+    position: relative
+    width: 800px
+    overflow: hidden
+    margin: auto
+    left: 0
+    transition: all 0.3s ease-in-out
+
+  .title
+    p
+      font-family: 'Dosis', sans-serif
+      color: white
+      position: absolute
+      left: 50%
+      width: 350px
+      right: 50%
+      top: 320px
+      font-size: 24px
+      transition: all 300ms ease-in-out
+
+  .logo
+    +hide-text
+
+  .site-nav
+    position: relative
+    margin: auto
+    padding: 15px 30px
+    transition: all 0.3s
+
+    ul
+      display: flex
+      flex-direction: row
+      justify-content: center
+      list-style: none
+      margin: 20px 20px
+
+      li
+        font-family: 'Dosis', sans-serif
+        font-size: 26px
+        margin-right: -60px
+        opacity: 0
+        transform: translateX(-200px)
+        transition: all 1000ms ease-in-out
+        text-align: center
+
+        &.nav-is-visible
+          transform: translateX(0px)
+          opacity: 1
+          margin-right: 60px
+
+      .email-link
+        display: block
+        text-align:right
+
+  .mobile-nav-toggle
+    display: none
+    width: 60px
+    height: 60px
+    bottom: 170px
+    position: relative
+    left: 50%
+    align-items: center
+    background: none
+
+    span,
+    span:before,
+    span:after
+      content: ""
+      display: flex
+      flex-wrap: wrap
+      height: 3px
+      width: 100%
+      background: $white
+      margin-top: 10px
+      position: relative
+      transition: all 0.3s ease-in-out
+
+      span:before
+        top: 20px
+
+      span:after
+        top: -17px
+
+        &.is-open span
+          background: transparent
+
+        &.is-open span::before,
+        &.is-open span::after
+          transform-origin: center
+          transform: rotate(45deg)
+          top: 0
+
+        &.is-open span::after
+          transform: rotate(-45deg)
+
+  .mobile-nav
+    position: absolute
+    width: 360px
+    background: #2D2D2D
+    padding: 180px 0 20px
+    transform: translateY(-100%)
+    transition: all 1s ease-in-out
+
+@media only screen and (min-device-width: 320px) and (orientation: portrait)
+
+  .home-wrap
+    overflow: hidden
+    width: 360px
+    z-index: 3
+
+    header
+      width: 360px
+      height: 150px
+
+      &.header-small
+        position: fixed
+        height: 80px
+
+        .mobile-nav-toggle
+          display: flex
+          position: relative
+          margin-left: -5px
+          left: 130px
+          top: 0px
+          z-index: 3
+          transition: all 0.3s ease-in-out
+
+        .mobile-nav.is-open
+          display: block
+          transform: translateY(0%)
+          z-index: 2
+          height: 100px
+          padding: 100px 0 20px
+          position: fixed
+
+        .mobile-nav
+          position: fixed
+          width: 360px
+          background: #2D2D2D
+          transform: translateY(-80%)
+          transition: all 1s ease-in-out
+
+          ul
+            display: block
+            li
+              text-align: center
+              font-family: 'Dosis', sans-serif
+              font-size: 14px
+
+        #bodymovin
+          width: 150px
+          top: 0
+
+          ul
+            list-style: none
+            margin: 0
+            padding: 0
+            li
+              margin-top: 25px
+              text-align: center
+              font-family: 'Dosis', sans-serif
+              font-size: 14px
+
+      #bodymovin
+        width: 200px
+
+    .title
+      visibility: hidden
+
+    .site-nav
+      display: none
+      &.nav-is-visible
+        display: none
+
+    .mobile-nav-toggle
+      display: flex
+      position: absolute
+      left: 160px
+      top: 70px
+      bottom: 0
+      z-index: 2
+
+    .mobile-nav.is-open
+      display: flex
+      width: 360px
+      transform: translateY(0%)
+      z-index: 2
+      position: fixed
+      padding: 140px 0 20px
+      transition: all 1s ease-in-out
+
+      ul
+        list-style: none
+        margin: 0
+        padding: 0
+        li
+          margin-left: 152px
+          margin-top: 25px
+          text-align: center
+          font-family: 'Dosis', sans-serif
+          font-size: 14px
+
+    .mobile-nav
+      position: fixed
+      width: 360px
+      background: #2D2D2D
+      z-index: 2
+      transform: translateY(-100%)
+      transition: all 1s ease-in-out
+
+      ul
+        list-style: none
+        margin: 0
+        padding: 0
+        li
+          margin-top: 25px
+          text-align: center
+          font-family: 'Dosis', sans-serif
+          font-size: 14px
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 775px) and (orientation: landscape)
+
+  .home-wrap
+    overflow: hidden
+    width: 775px
+    z-index: 3
+
+    header
+      width: 775px
+      height: 150px
+
+      &.header-small
+        position: fixed
+        height: 80px
+
+        .mobile-nav-toggle
+          display: flex
+          position: relative
+          margin-left: -5px
+          left: 130px
+          top: 0px
+          z-index: 3
+          transition: all 0.3s ease-in-out
+
+        .mobile-nav.is-open
+          display: block
+          transform: translateY(0%)
+          z-index: 2
+          height: 100px
+          padding: 100px 0 20px
+          position: fixed
+
+        .mobile-nav
+          position: fixed
+          width: 775px
+          background: #2D2D2D
+          transform: translateY(-80%)
+          transition: all 1s ease-in-out
+
+          ul
+            display: block
+            li
+              text-align: center
+              font-family: 'Dosis', sans-serif
+              font-size: 14px
+
+        #bodymovin
+          width: 150px
+          top: 0
+
+          ul
+            list-style: none
+            margin: 0
+            padding: 0
+            li
+              margin-top: 25px
+              text-align: center
+              font-family: 'Dosis', sans-serif
+              font-size: 14px
+
+      #bodymovin
+        width: 200px
+
+    .title
+      visibility: hidden
+
+    .site-nav
+      display: none
+      &.nav-is-visible
+        display: none
+
+    .mobile-nav-toggle
+      display: flex
+      position: absolute
+      left: 160px
+      top: 70px
+      bottom: 0
+      z-index: 2
+
+    .mobile-nav.is-open
+      display: flex
+      width: 775px
+      transform: translateY(0%)
+      z-index: 2
+      position: fixed
+      padding: 140px 0 20px
+      transition: all 1s ease-in-out
+
+      ul
+        list-style: none
+        margin: 0
+        padding: 0
+        li
+          margin-left: 152px
+          margin-top: 25px
+          text-align: center
+          font-family: 'Dosis', sans-serif
+          font-size: 14px
+
+    .mobile-nav
+      position: fixed
+      width: 775px
+      background: #2D2D2D
+      z-index: 2
+      transform: translateY(-100%)
+      transition: all 1s ease-in-out
+
+      ul
+        list-style: none
+        margin: 0
+        padding: 0
+        li
+          margin-top: 25px
+          text-align: center
+          font-family: 'Dosis', sans-serif
+          font-size: 14px
+
+@media only screen and (min-device-width: 600px) and (max-device-width: 1024px) and (orientation: portrait)
+  .home-wrap
+    overflow: hidden
+    width: 600px
+    z-index: 3
+
+    header
+      width: 600px
+      height: 150px
+
+      &.header-small
+        position: fixed
+        height: 80px
+
+        .mobile-nav-toggle
+          display: flex
+          position: relative
+          margin-left: -5px
+          left: 130px
+          top: 0px
+          z-index: 3
+          transition: all 0.3s ease-in-out
+
+        .mobile-nav.is-open
+          display: block
+          transform: translateY(0%)
+          z-index: 2
+          height: 100px
+          padding: 100px 0 20px
+          position: fixed
+
+        .mobile-nav
+          position: fixed
+          width: 600px
+          background: #2D2D2D
+          transform: translateY(-80%)
+          transition: all 1s ease-in-out
+
+          ul
+            display: block
+            li
+              text-align: center
+              font-family: 'Dosis', sans-serif
+              font-size: 14px
+
+        #bodymovin
+          width: 150px
+          top: 0
+
+          ul
+            list-style: none
+            margin: 0
+            padding: 0
+            li
+              margin-top: 25px
+              text-align: center
+              font-family: 'Dosis', sans-serif
+              font-size: 14px
+
+      #bodymovin
+        width: 200px
+
+    .title
+      visibility: hidden
+    .site-nav
+      display: none
+      &.nav-is-visible
+        display: none
+
+    .mobile-nav-toggle
+      display: flex
+      position: absolute
+      left: 160px
+      top: 70px
+      bottom: 0
+      z-index: 2
+
+    .mobile-nav.is-open
+      display: flex
+      width: 360px
+      transform: translateY(0%)
+      z-index: 2
+      position: fixed
+      padding: 140px 0 20px
+      transition: all 1s ease-in-out
+
+      ul
+        list-style: none
+        margin: 0
+        padding: 0
+        li
+          margin-left: 152px
+          margin-top: 25px
+          text-align: center
+          font-family: 'Dosis', sans-serif
+          font-size: 14px
+
+    .mobile-nav
+      position: fixed
+      width: 360px
+      background: #2D2D2D
+      z-index: 2
+      transform: translateY(-100%)
+      transition: all 1s ease-in-out
+
+      ul
+        list-style: none
+        margin: 0
+        padding: 0
+        li
+          margin-top: 25px
+          text-align: center
+          font-family: 'Dosis', sans-serif
+          font-size: 14px
+
+@media only screen and (min-device-width: 600px) and (max-device-width: 1280px) and (orientation: landscape)
+    .home-wrap
+      overflow: hidden
+      width: 1280px
+      z-index: 3
+
+      header
+        width: 1280px
+        height: 220px
+
+        &.header-small
+          position: fixed
+          height: 80px
+
+          #bodymovin
+            width: 150px
+            top: 0
+
+            ul
+              list-style: none
+              margin: 0
+              padding: 0
+              li
+                margin-top: 25px
+                text-align: center
+                font-family: 'Dosis', sans-serif
+                font-size: 14px
+
+        #bodymovin
+          width: 200px
+
+      .title
+        visibility: hidden

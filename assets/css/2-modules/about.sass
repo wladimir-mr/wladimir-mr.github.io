@@ -1,0 +1,121 @@
+.section-about
+  position: relative
+  background: none
+  width: 49%
+  opacity: 0
+  transition: all 1000ms ease-in-out
+  transform: translateY(200px)
+
+  &.about-is-visible
+      transform: translateY(0px)
+      opacity: 1
+
+  p
+    font-family: 'Old Standard TT', serif
+    font-size: 32px
+    color: gray
+    text-indent: 50px
+    &:first-child
+      font-size: 40px
+
+  .circle
+    position: absolute
+    top: 10px
+    left: 500px
+    z-index: -2
+    width: 1200px
+    height: 1200px
+    border-radius: 300px
+    background: none
+    border: 0px solid red
+    border-radius: 300px
+    transform: translateY(50px)
+    visibility: hidden
+    &.circle-visible
+      visibility: visible
+      animation: circle 2s
+
+      @keyframes circle
+        0%
+          transform: translateY(400px)
+          width: 0px
+          height: 0px
+          border: 10px solid red
+        80%
+            opacity: 0.5
+        100%
+          transform: translateY(50px)
+          opacity: 0
+          border: none
+          width: 1000px
+          height: 1000px
+          border-radius: 500px
+
+  .square
+    position: absolute
+    left: -150px
+    z-index: -2
+    width: 1000px
+    top: 120px
+    height: 1300px
+    background: none
+    border: 3px solid gray
+    animation: square 2.5s
+
+    @keyframes square
+      0%
+        transform: translateY(400px)
+        width: 0px
+        height: 0px
+
+      100%
+        transform: translateY(0px)
+        width: 1000px
+        height: 1300px
+
+.top
+  position: fixed
+  padding: 10px 10px
+  width: 50px
+  margin-left: 50px
+  bottom: 50px
+  right: 0
+  transition: opacity .3s 0s, visibility 0s .3s
+  visibility: hidden
+  opacity: 0
+
+.top.cd-is-visible,
+.top.cd-fade-out,
+.no-touch .top:hover
+  transition: opacity .3s 0s, visibility 0s 0s
+
+.top.cd-is-visible
+  visibility: visible
+  opacity: 1
+
+.top.cd-fade-out
+  opacity: .5
+
+.no-touch .top:hover
+  opacity: 1
+
+@media only screen and (min-device-width: 320px) and (orientation: portrait)
+
+  .section-about
+    width: 350px
+    transform: translateY(0px)
+
+    p
+      font-size: 8px
+      padding: 0px 10px
+
+
+  .top
+    position: fixed
+    padding: 10px 10px
+    width: 50px
+    background: pink
+    bottom: 0
+    right: 0
+    transition: opacity .3s 0s, visibility 0s .3s
+    visibility: visible

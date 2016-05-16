@@ -1,0 +1,125 @@
+.work-section
+  position: relative
+  margin: auto
+  width: 90%
+  display: flex
+  flex-direction: column
+  .work-name
+    width: 500px
+    margin: auto
+    h1
+      margin: auto
+      font-family: 'Old Standard TT', serif
+      font-weight: 400
+      font-size: 72px
+      text-align: center
+      margin-bottom: 20px
+    p
+      font-family: 'Dosis', sans-serif
+      font-size: 32px
+  .work-showcase
+    position: relative
+    text-align: center
+    img
+      width: 48%
+      margin-left: 5px
+    .last
+      width: 27%
+  .work-showcase-web
+    height: 100%
+    position: relative
+    background: none
+    .mac
+      animation: macmove 2s
+      @keyframes macmove
+       0%
+        transform: translateX(-600px)
+       100%
+        transform: translateX(0)
+    .cell
+      animation: cellmove 2s
+      @keyframes cellmove
+       0%
+        transform: translatey(600px)
+       100%
+        transform: translateX(0)
+    .web
+      animation: webmove 2s
+      @keyframes webmove
+       0%
+        transform: translatey(200px)
+       100%
+        transform: translateX(0)
+    img
+      width: 60%
+    :first-child
+      width: 75%
+      left: -100px
+    :nth-child(2)
+      width: 20%
+      right: 0
+    :nth-child(3)
+      width: 60%
+      position: relative
+    :nth-child(4)
+      width: 50%
+      position: absolute
+      z-index: -1
+      left: 500px
+      margin-bottom: 50px
+      bottom: -125px
+  .work-showcase-editorial
+    margin: auto
+    text-align: center
+    img
+      width: 80%
+
+.square-web
+  width: 1200px
+  height: 500px
+  position: absolute
+  border: 10px solid orange
+  bottom: 200px
+  z-index: -2
+  animation: squareweb 2s
+  @keyframes squareweb
+    0%
+      width: 1200px
+      height: 0px
+    100%
+        width: 1200px
+
+@media only screen and (min-device-width: 320px) and (orientation: portrait)
+  .work-section
+    width: 100%
+    .work-name
+      width: 100%
+      h1
+        font-size: 36px
+      p
+        font-size: 24px
+        text-align: center
+
+@media only screen and (min-device-width: 600px) and (max-device-width: 1280px) and (orientation: landscape)
+  .work-section
+    margin: auto
+    align-items: center
+    width: 800px
+    .work-name
+      width: 100%
+      h1
+        font-size: 36px
+      p
+        font-size: 24px
+        text-align: center
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 775px) and (orientation: landscape)
+    .work-section
+      width: 320px
+      .work-name
+        width: 320px
+        h1
+          font-size: 28px
+        p
+          font-size: 24px
+          text-align: center

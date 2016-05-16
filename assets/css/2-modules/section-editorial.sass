@@ -1,0 +1,90 @@
+.section-editorial
+  position: absolute
+  width: 600px
+  left: 50%
+  top: 950px
+  overflow: hidden
+  background: none
+  transform: translateY(200px)
+  transition: all 500ms ease-in-out
+  opacity: 0
+  img
+    width: 600px
+
+  &.editorial-visible
+    transform: translateY(0px)
+    opacity: 1
+
+  .text-editorial
+    width: 100%
+    height: 776px
+    position: absolute
+    z-index: 1
+    top: 0
+    opacity: 0
+    background: rgba(pink, 0.6)
+    transition: all 300ms ease-in-out
+
+    h1
+      position: absolute
+      color: black
+      font-family: 'Dosis', sans-serif
+      font-weight: 400
+      opacity: 0
+      transform: translateY(50px)
+      transition: all 200ms ease-in-out
+      font-size: 100px
+      text-align: center
+      top: 300px
+      margin-left: 50px
+
+.section-editorial:hover .text-editorial
+  opacity: 1
+  box-shadow: 0 14px 14px -15px black
+
+  h1
+    opacity: 1
+    transform: translateY(0px)
+
+@media only screen and (min-device-width: 320px) and (orientation: portrait)
+  .section-editorial
+    width: 360px
+    height: 460px
+    left: 0
+    top: 0
+    position: relative
+    opacity: 1
+    img
+      width: 360px
+      height: 460px
+    &.editorial-visible
+      transform: translateY(0px)
+      opacity: 1
+
+    .text-editorial
+      width: 360px
+      height: 465px
+      opacity: 1
+
+      h1
+        opacity: 1
+        font-size: 48px
+        left: -30px
+        top: 150px
+
+@media only screen and (min-device-width: 600px) and (max-device-width: 1280px) and (orientation: landscape)
+  .section-editorial
+    width: 600px
+    transform: translateX(0)
+    transform: rotate(0deg)
+    left: 0
+    top: 0
+    position: relative
+    .text-editorial
+      width: 600px
+      opacity: 1
+      h1
+        opacity: 1
+        font-size: 72px
+        left: -30px
+        top: 150px

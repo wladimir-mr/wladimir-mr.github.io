@@ -1,0 +1,97 @@
+.section-about-me
+  margin: auto
+  max-width: 700px
+  height: 600px
+  text-align: center
+  background: none
+  h1
+    font-size: 62px
+    font-family: 'Old Standard TT', serif
+    font-weight: 400
+  p
+    font-size: 34px
+    font-family: 'Old Standard TT', serif
+  .resumee
+    position: relative
+    margin: auto
+    width: 200px
+    background: gray
+    padding: 10px 15px
+    border: 5px solid gray
+    transition: box-shadow 300ms ease-in-out
+    span
+      font-size: 26px
+      color: lightgray
+      font-family: 'Dosis', sans-serif
+      font-weight: 700
+  .resumee:hover
+      box-shadow: 0 14px 14px -15px black
+  .circle-about
+    width: 600px
+    height: 600px
+    border-radius: 300px
+    background: pink
+    position: absolute
+    top: 0
+    bottom: 0
+    z-index: -2
+    animation: circlevisible 2s
+    @keyframes circlevisible
+      0%
+        width: 0px
+        height: 0px
+        border-radius: 300px
+      100%
+        width: 600px
+        height: 600px
+        border-radius: 300px
+        background: pink
+
+@media (max-width: 775px)
+  .section-about-me
+    margin: auto
+    width: auto
+    h1
+      font-size: 48px
+      font-family: 'Old Standard TT', serif
+      font-weight: 400
+    p
+      font-size: 26px
+      font-family: 'Old Standard TT', serif
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 775px) and (orientation: landscape)
+  .section-about-me
+    margin: auto
+    width: 775px
+    h1
+      font-size: 48px
+      font-family: 'Old Standard TT', serif
+      font-weight: 400
+    p
+      font-size: 26px
+      font-family: 'Old Standard TT', serif
+
+@media only screen and (min-device-width: 600px) and (max-device-width: 1024px) and (orientation: portrait)
+  .section-about-me
+    margin: auto
+    max-width: 600px
+    h1
+      font-size: 48px
+      font-family: 'Old Standard TT', serif
+      font-weight: 400
+    p
+      font-size: 26px
+      font-family: 'Old Standard TT', serif
+
+@media only screen and (min-device-width: 600px) and (max-device-width: 1280px) and (orientation: landscape)
+    .section-about-me
+      margin: auto
+      max-width: 775px
+      h1
+        width: 800px
+        font-size: 48px
+        font-family: 'Old Standard TT', serif
+        font-weight: 400
+      p
+        font-size: 26px
+        font-family: 'Old Standard TT', serif
