@@ -1213,6 +1213,21 @@ a, li, ul {
         font-size: 64px;
         top: 0; } }
 
+@media only screen and (min-device-width: 1280px) and (max-device-width: 1368px) and (orientation: landscape) {
+  .section-mograph {
+    width: 500px;
+    height: 300px;
+    left: 580px;
+    border: 3px solid gray; }
+    .section-mograph img {
+      width: 650px; }
+    .section-mograph .text-mograph {
+      width: 650px;
+      height: 365px; }
+      .section-mograph .text-mograph h1 {
+        font-size: 64px;
+        top: 0; } }
+
 .section-web {
   position: relative;
   width: 1280px;
