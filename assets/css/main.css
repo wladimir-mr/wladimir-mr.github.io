@@ -464,7 +464,7 @@ a, li, ul {
     margin: auto;
     position: fixed;
     transition: height 0.3s;
-    height: 550px; }
+    height: 560px; }
     .home-wrap header.header-small {
       position: fixed;
       height: 80px;
@@ -540,12 +540,13 @@ a, li, ul {
     display: none;
     width: 60px;
     height: 60px;
-    bottom: 170px;
+    bottom: 0;
+    margin-top: 15px;
     position: relative;
     left: 50%;
+    background: none;
     -ms-flex-align: center;
-        align-items: center;
-    background: none; }
+        align-items: center; }
     .home-wrap .mobile-nav-toggle span,
     .home-wrap .mobile-nav-toggle span:before,
     .home-wrap .mobile-nav-toggle span:after {
@@ -554,45 +555,33 @@ a, li, ul {
       display: flex;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-      height: 3px;
+      height: 2px;
       width: 100%;
       background: #fff;
-      margin-top: 10px;
+      margin-top: 0px;
       position: relative;
       transition: all 0.3s ease-in-out; }
-      .home-wrap .mobile-nav-toggle span span:before,
-      .home-wrap .mobile-nav-toggle span:before span:before,
-      .home-wrap .mobile-nav-toggle span:after span:before {
-        top: 20px; }
-      .home-wrap .mobile-nav-toggle span span:after,
-      .home-wrap .mobile-nav-toggle span:before span:after,
-      .home-wrap .mobile-nav-toggle span:after span:after {
-        top: -17px; }
-        .home-wrap .mobile-nav-toggle span span:after.is-open span,
-        .home-wrap .mobile-nav-toggle span:before span:after.is-open span,
-        .home-wrap .mobile-nav-toggle span:after span:after.is-open span {
-          background: transparent; }
-        .home-wrap .mobile-nav-toggle span span:after.is-open span::before,
-        .home-wrap .mobile-nav-toggle span span:after.is-open span::after,
-        .home-wrap .mobile-nav-toggle span:before span:after.is-open span::before,
-        .home-wrap .mobile-nav-toggle span:before span:after.is-open span::after,
-        .home-wrap .mobile-nav-toggle span:after span:after.is-open span::before,
-        .home-wrap .mobile-nav-toggle span:after span:after.is-open span::after {
-          -webkit-transform-origin: center;
-                  transform-origin: center;
-          -webkit-transform: rotate(45deg);
-                  transform: rotate(45deg);
-          top: 0; }
-        .home-wrap .mobile-nav-toggle span span:after.is-open span::after,
-        .home-wrap .mobile-nav-toggle span:before span:after.is-open span::after,
-        .home-wrap .mobile-nav-toggle span:after span:after.is-open span::after {
-          -webkit-transform: rotate(-45deg);
-                  transform: rotate(-45deg); }
+    .home-wrap .mobile-nav-toggle span:before {
+      top: -15px; }
+    .home-wrap .mobile-nav-toggle span:after {
+      top: 15px; }
+    .home-wrap .mobile-nav-toggle.is-open span {
+      background: transparent; }
+    .home-wrap .mobile-nav-toggle.is-open span::before,
+    .home-wrap .mobile-nav-toggle.is-open span::after {
+      -webkit-transform-origin: center;
+              transform-origin: center;
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg);
+      top: 0; }
+    .home-wrap .mobile-nav-toggle.is-open span::after {
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
   .home-wrap .mobile-nav {
     position: absolute;
     width: 360px;
     background: #2D2D2D;
-    padding: 180px 0 20px;
+    padding: 180px 0 25px;
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
     transition: all 1s ease-in-out; }
@@ -600,10 +589,10 @@ a, li, ul {
 @media only screen and (min-device-width: 320px) and (orientation: portrait) {
   .home-wrap {
     overflow: hidden;
-    width: 360px;
+    width: 450px;
     z-index: 3; }
     .home-wrap header {
-      width: 360px;
+      width: 450px;
       height: 150px; }
       .home-wrap header.header-small {
         position: fixed;
@@ -627,7 +616,7 @@ a, li, ul {
           position: fixed; }
         .home-wrap header.header-small .mobile-nav {
           position: fixed;
-          width: 360px;
+          width: 450px;
           background: #2D2D2D;
           -webkit-transform: translateY(-80%);
                   transform: translateY(-80%);
@@ -662,14 +651,14 @@ a, li, ul {
       display: -ms-flexbox;
       display: flex;
       position: absolute;
-      left: 160px;
+      left: 200px;
       top: 70px;
       bottom: 0;
       z-index: 2; }
     .home-wrap .mobile-nav.is-open {
       display: -ms-flexbox;
       display: flex;
-      width: 360px;
+      width: 450px;
       -webkit-transform: translateY(0%);
               transform: translateY(0%);
       z-index: 2;
@@ -681,14 +670,14 @@ a, li, ul {
         margin: 0;
         padding: 0; }
         .home-wrap .mobile-nav.is-open ul li {
-          margin-left: 152px;
+          margin-left: 198px;
           margin-top: 25px;
           text-align: center;
           font-family: 'Dosis', sans-serif;
           font-size: 14px; }
     .home-wrap .mobile-nav {
       position: fixed;
-      width: 360px;
+      width: 450px;
       background: #2D2D2D;
       z-index: 2;
       -webkit-transform: translateY(-100%);
