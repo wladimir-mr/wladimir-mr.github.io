@@ -9,13 +9,14 @@ a, li, ul
   overflow: hidden
   z-index: 3
 
+
   header
     width: 100%
     background: #2D2D2D
     margin: auto
     position: fixed
     transition: height 0.3s
-    height: 550px
+    height: 560px
 
     &.header-small
       position: fixed
@@ -98,11 +99,13 @@ a, li, ul
     display: none
     width: 60px
     height: 60px
-    bottom: 170px
+    bottom: 0
+    margin-top: 15px
     position: relative
     left: 50%
-    align-items: center
     background: none
+    align-items: center
+
 
     span,
     span:before,
@@ -110,36 +113,36 @@ a, li, ul
       content: ""
       display: flex
       flex-wrap: wrap
-      height: 3px
+      height: 2px
       width: 100%
       background: $white
-      margin-top: 10px
+      margin-top: 0px
       position: relative
       transition: all 0.3s ease-in-out
 
-      span:before
-        top: 20px
+    span:before
+      top: -15px
 
-      span:after
-        top: -17px
+    span:after
+      top: 15px
 
-        &.is-open span
-          background: transparent
+    &.is-open span
+      background: transparent
 
-        &.is-open span::before,
-        &.is-open span::after
-          transform-origin: center
-          transform: rotate(45deg)
-          top: 0
+    &.is-open span::before,
+    &.is-open span::after
+      transform-origin: center
+      transform: rotate(45deg)
+      top: 0
 
-        &.is-open span::after
-          transform: rotate(-45deg)
+    &.is-open span::after
+      transform: rotate(-45deg)
 
   .mobile-nav
     position: absolute
     width: 360px
     background: #2D2D2D
-    padding: 180px 0 20px
+    padding: 180px 0 25px
     transform: translateY(-100%)
     transition: all 1s ease-in-out
 
@@ -147,11 +150,11 @@ a, li, ul
 
   .home-wrap
     overflow: hidden
-    width: 360px
+    width: 450px
     z-index: 3
 
     header
-      width: 360px
+      width: 450px
       height: 150px
 
       &.header-small
@@ -177,7 +180,7 @@ a, li, ul
 
         .mobile-nav
           position: fixed
-          width: 360px
+          width: 450px
           background: #2D2D2D
           transform: translateY(-80%)
           transition: all 1s ease-in-out
@@ -217,14 +220,14 @@ a, li, ul
     .mobile-nav-toggle
       display: flex
       position: absolute
-      left: 160px
+      left: 200px
       top: 70px
       bottom: 0
       z-index: 2
 
     .mobile-nav.is-open
       display: flex
-      width: 360px
+      width: 450px
       transform: translateY(0%)
       z-index: 2
       position: fixed
@@ -236,7 +239,7 @@ a, li, ul
         margin: 0
         padding: 0
         li
-          margin-left: 152px
+          margin-left: 198px
           margin-top: 25px
           text-align: center
           font-family: 'Dosis', sans-serif
@@ -244,7 +247,7 @@ a, li, ul
 
     .mobile-nav
       position: fixed
-      width: 360px
+      width: 450px
       background: #2D2D2D
       z-index: 2
       transform: translateY(-100%)
